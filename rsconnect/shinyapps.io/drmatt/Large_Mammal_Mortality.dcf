@@ -1,0 +1,12 @@
+name: Large_Mammal_Mortality
+title: Large_Mammal_Mortality
+username:
+account: drmatt
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 1077286
+bundleId: 2304291
+url: https://drmatt.shinyapps.io/Large_Mammal_Mortality/
+when: 1565360059.50394
+asMultiple: FALSE
+asStatic: FALSE

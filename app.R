@@ -4,7 +4,8 @@ require(shinydashboard)
 library(ggplot2)
 library(dplyr)
 library(devtools)
-source_url("https://raw.githubusercontent.com/DrMattG/ShinyNINA/master/Shinytheme_NINA.R")
+#library(dashboardthemes)
+#source_url("https://raw.githubusercontent.com/DrMattG/ShinyNINA/master/Shinytheme_NINA.R")
 ###########################
 ###########################
 options(encoding="UTF-8")
@@ -61,7 +62,7 @@ ui <- dashboardPage(
                                href = "https://www.nina.no")
         )
       ),
-    dashboardBody(theme_nina,
+    dashboardBody(#theme_nina,
       tags$head(
         tags$link(rel="stylesheet", type= "text/css", href="custom1.css")),
       tabsetPanel(
