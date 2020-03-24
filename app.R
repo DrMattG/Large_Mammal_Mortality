@@ -3,9 +3,10 @@ library(shiny)
 require(shinydashboard)
 library(ggplot2)
 library(dplyr)
+library(tidyverse)
 library(devtools)
 #library(dashboardthemes)
-#source_url("https://raw.githubusercontent.com/DrMattG/ShinyNINA/master/Shinytheme_NINA.R")
+source_url("https://raw.githubusercontent.com/DrMattG/ShinyNINA/master/Shinytheme_NINA.R")
 ###########################
 ###########################
 options(encoding="UTF-8")
@@ -24,6 +25,9 @@ dattable <- fromJSONstat(content(d.tmp, "text"))
 head(dattable)
 #data manipulation
 dattable<-dattable %>% 
+  separate(.,region, c("region", "update"), sep = " ")
+dattable<-dattable %>% 
+  select(-update) %>% 
   mutate(region=case_when
          (region %in%  c("Trøndelag","Sør-Trøndelag (-2017)" , "Nord-Trøndelag (-2017)") ~ "Trøndelag",
            region %in%  c("Østfold")~"Østfold",
