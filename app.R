@@ -5,7 +5,7 @@ library(ggplot2)
 library(dplyr)
 library(tidyverse)
 library(devtools)
-#library(dashboardthemes)
+library(dashboardthemes)
 source_url("https://raw.githubusercontent.com/DrMattG/ShinyNINA/master/Shinytheme_NINA.R")
 ###########################
 ###########################
@@ -118,7 +118,7 @@ ui <- dashboardPage(
           ),
           box(title = "Data description",
               p("This Shiny App uses an API link to Statistics Norway to display known mortalities of large carnivorous mammals in Norway by year.
-                The reported reason is one of 'Total' (all reported mortalities); 'Noxious' (killed as a disease risk), 'Self-defence' (animal killed in self defence),
+                The reported reason is one of 'Total' (all reported mortalities); 'Noxious' (killed as a risk to livestock), 'Self-defence' (animal killed in self defence),
                 'Illegal' (confirmed poaching),  'Vehicle' (road traffic accident), 'Train' (train collision),  'Other' (other unrecorded causes),
                 'Hunting (not Lynx)' (licensed hunting), 'Quota' (Licensed lynx hunting). 
                 
